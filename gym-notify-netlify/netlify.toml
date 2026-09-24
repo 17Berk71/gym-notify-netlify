@@ -1,0 +1,10 @@
+[build]
+  functions = "netlify/functions"
+
+# Чтобы мини-приложение могло стучаться на понятный адрес /api/sync,
+# а не на длинный /.netlify/functions/sync
+[[redirects]]
+  from = "/api/sync"
+  to = "/.netlify/functions/sync"
+  status = 200
+  force = true
